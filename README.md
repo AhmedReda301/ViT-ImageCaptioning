@@ -35,8 +35,20 @@ It includes full <span style="color:#32CD32;">data preprocessing</span>, <span s
 ## <span style="color:#1E90FF;"> Sample Output:</span>
 ![Captioned Image](streamlit/imgs/img3.png)
 
+## <span style="color:#1E90FF;"> Dataset:</span>
+
+The **Flickr30k** dataset consists of 31,784 images, each accompanied by five captions.  
+It provides a wide variety of scenes and objects, making it ideal for diverse image captioning tasks.
+
+**To download the dataset, follow these steps:**
+
+1. Enable Kaggle’s public API by following the instructions [here](https://www.kaggle.com/docs/api).  
+2. Run the following command to download the dataset:
+```bash
+kaggle datasets download -d hsankesara/flickr-image-dataset -p /path/to/data/Flickr30
 
    
+
 
 
 
