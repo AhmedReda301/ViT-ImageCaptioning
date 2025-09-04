@@ -1,31 +1,39 @@
-# ViT-ImageCaptioning
-ImgCap is an image captioning model designed to automatically generate descriptive captions for images. It consists of four model variants:
+<span style="color:#FFA500;"> ViT-ImageCaptioning</span>
 
-1- ViT + Transformer
-2- CNN + Transformer
-3- CNN + LSTM
-4- CNN + LSTM with Attention mechanism
+ImgCap is an image captioning model designed to automatically generate descriptive captions for images.
+It includes four model variants:
 
-Currently, only the ViT + Transformer model has been trained. The other variants have not been trained yet. The ViT model is still undergoing training and requires more time to reach optimal accuracy. Note that training this model is computationally intensive and can take up to three days.
+ViT + Transformer
 
-usage
+CNN + Transformer
 
-1- Clone the repository:
-git clone https://github.com/AhmedReda301/ViT-ImageCaptioning.git
+CNN + LSTM
 
-2- Install the required dependencies:
-  1-pip3 install -r requirements.txt
-  2-python3 -q -m spacy download en_core_web_sm
+CNN + LSTM with Attention mechanism
 
-3- Download the model checkpoint (manual step):
-
-
-4- Run the main script:
-python3 main.py
-
-Sample Output
-![Captioned Image]()
-![Captioned Image](streamlit/imgs/img3.png)
+Note: Only the ViT + Transformer model has been trained so far. Training is computationally intensive and may take up to 3 days on a high-end GPU.
 
 
 
+<span style="color:#32CD32;"> Key Highlights:</span>
+
+Modeling: ViT or CNN encoders combined with Transformer or LSTM decoders.
+
+Attention Mechanism: Optional in CNN + LSTM variant.
+
+Evaluation Metrics: BLEU-1/2/3/4, CIDEr.
+
+Training Optimizations: Mixed precision (Float16) and torch.compile for efficient GPU usage.
+
+
+<span style="color:#32CD32;"> Dataset:</span>
+
+Source: Flickr30k Dataset - Kaggle
+
+Description: 31,784 images, each with 5 captions
+
+Purpose: Diverse image captioning tasks
+
+Download via Kaggle API:
+
+kaggle datasets download -d hsankesara/flickr-image-dataset -p /path/to/data/Flickr30
