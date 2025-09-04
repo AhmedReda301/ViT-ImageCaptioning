@@ -34,7 +34,7 @@ It includes full <span style="color:#32CD32;">data preprocessing</span>, <span s
 
 ### <span style="color:#1E90FF;"> Sample Output:</span>
 
-<video src="captioned_images/Recording.mp4" controls width="600"></video>
+![Captioned Image](streamlit/imgs/img3.png)
 
 ## <span style="color:#1E90FF;"> Dataset:</span>
 
