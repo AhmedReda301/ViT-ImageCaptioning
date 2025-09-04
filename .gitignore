@@ -1,0 +1,14 @@
+# Ignore all data
+Data/
+!Data/.gitkeep   # Keep empty Data folder if needed
+
+# Ignore python cache
+__pycache__/
+*.pyc
+*.pyo
+
+# Ignore results, models checkpoints, and logs
+results/**/*.pkl
+
+# Ignore streamlit cache
+.streamlit/
