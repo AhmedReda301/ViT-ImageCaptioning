@@ -49,7 +49,7 @@ Run the following command to download the full dataset **or** click [Download Da
 kaggle datasets download -d hsankesara/flickr-image-dataset -p /path/to/data/Flickr30
 ```
 
-### **(Option2) Sample Dataset (~2% of total):**  
+### **Option2 Sample Dataset (~2% of total):**  
 Run the following command to download the sample dataset **or** click [Download Sample Dataset](https://www.kaggle.com/datasets/ahmedredaahmedali/flickr30k-dataset-2-sample):
 ```bash
 kaggle datasets download -d ahmedredaahmedali/flickr30k-dataset-2-sample -p /path/to/data/Flickr30_sample
@@ -57,6 +57,62 @@ kaggle datasets download -d ahmedredaahmedali/flickr30k-dataset-2-sample -p /pat
 I have created a small sample of approximately 2% of the full dataset.  
 This allows you to **test your pipeline** and verify that everything works correctly before training your model on the full dataset.  
 
+
+## <span style="color:#32CD32;"> Model Architecture:</span>
+
+The model used is **ImgCap (ViT + Transformer)** for image captioning. It consists of two main components: a **Vision Transformer (ViT) encoder** and a **Transformer-based decoder**.
+
+---
+
+### **ViT Encoder**
+
+- **Backbone:** Pretrained **ViT-B/16** from `torchvision.models`
+- **Input:** Image tensor `(B, 3, H, W)`  
+- **Patch Embedding:** Images divided into patches and projected to embedding dimension (768)  
+- **Class Token:** Added to the patch embeddings for global representation  
+- **Positional Encoding:** Added to patches to retain positional information  
+- **Transformer Encoder Layers:** Processes the sequence of patches + class token  
+- **Output:** Patch feature sequence `(B, num_patches, 768)`  
+- **Fine-tuning Strategy:**  
+  - All ViT parameters frozen by default  
+  - Optionally, last encoder layers can be unfrozen for fine-tuning
+
+---
+
+### **Transformer Decoder**
+
+- **Embedding Layer:** Converts token indices to embeddings  
+- **Positional Encoding:** Added to token embeddings to retain order  
+- **Feature Projection:** Projects ViT features (768) to decoder embedding dimension (default 512)  
+- **Transformer Decoder Layers:** Multi-layer Transformer decoder attends to ViT features  
+- **Output Layer:** Linear layer projecting decoder output to vocabulary size  
+- **Sequence Generation:**  
+  - Uses teacher forcing during training  
+  - For inference, generates tokens step by step using predicted tokens
+
+---
+
+### **ImgCap (ViT + Transformer) Wrapper**
+
+- Combines **ViT Encoder** and **Transformer Decoder**  
+- Forward pass:
+  1. Images → ViT encoder → Patch features  
+  2. Patch features + Captions → Transformer decoder → Predicted token logits  
+- Caption Generation: Autoregressive generation using `<sos>` and `<eos>` tokens  
+- **Key Hyperparameters:**  
+  - Feature size: 768  
+  - Embedding dimension: 512  
+  - Number of decoder layers: 2  
+  - Max sequence length: 20  
+
+---
+
+### **Key Notes**
+
+- The model leverages **pretrained ViT features** to capture rich visual representations.  
+- Decoder is fully trainable to adapt to the captioning task.  
+- Positional encodings are used in both encoder and decoder to maintain sequence order.  
+- Optimized for **Float16 precision** and `torch.compile` for efficient GPU training.
 
 
 
