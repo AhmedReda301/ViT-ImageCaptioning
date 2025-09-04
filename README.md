@@ -12,6 +12,7 @@ It includes full <span style="color:#32CD32;">data preprocessing</span>, <span s
 
 
 ## <span style="color:#1E90FF;"> Usage</span>
+---
 
 1. **Clone the repository:**
   ```bash
@@ -33,11 +34,11 @@ It includes full <span style="color:#32CD32;">data preprocessing</span>, <span s
   ```
 
 ### <span style="color:#1E90FF;"> Sample Output:</span>
-
+---
 ![Captioned Image](streamlit/imgs/img3.png)
 
 ## <span style="color:#1E90FF;"> Dataset:</span>
-
+---
 The **Flickr30k** dataset consists of 31,784 images, each accompanied by five captions.  
 It provides a wide variety of scenes and objects, making it ideal for diverse image captioning tasks.
 
@@ -129,6 +130,7 @@ total parametets:
 | ImgCap ViT + Transformer | 18     | 0.6858  |0.5282    | 0.2982 | 0.4979 | 0.5128  | 0.6596  |
 
 **Note:** The models are still undertrained. With further training and more epochs, the BLEU and CIDEr scores are expected to improve.
+
 
 
 
