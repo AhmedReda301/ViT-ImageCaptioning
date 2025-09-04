@@ -49,13 +49,14 @@ Run the following command to download the full dataset **or** click [Download Da
 kaggle datasets download -d hsankesara/flickr-image-dataset -p /path/to/data/Flickr30
 ```
 
-**(Option2) Sample Dataset (~2% of total):**  
+### **(Option2) Sample Dataset (~2% of total):**  
 Run the following command to download the sample dataset **or** click [Download Sample Dataset](https://www.kaggle.com/datasets/ahmedredaahmedali/flickr30k-dataset-2-sample):
 ```bash
 kaggle datasets download -d ahmedredaahmedali/flickr30k-dataset-2-sample -p /path/to/data/Flickr30_sample
 ```
 I have created a small sample of approximately 2% of the full dataset.  
 This allows you to **test your pipeline** and verify that everything works correctly before training your model on the full dataset.  
+
 
 
 
