@@ -24,12 +24,20 @@ It includes full <span style="color:#32CD32;">data preprocessing</span>, <span s
   ```bash
   python -q -m spacy download en_core_web_sm
   ```
-3. **Download the model checkpoint (manual step):**
+3. **Download the model checkpoint (manual step):**  
+   - ImgCap (ViT + Transformer): [Download checkpoint](https://huggingface.co/your_model_link/resolve/main/vit_transformer.pth)
+
 4. **Run the main script:**
   ```bash
   python main.py
   ```
+
+## <span style="color:#1E90FF;"> Sample Output:</span>
+![Captioned Image](streamlit/imgs/img3.png)
+
+
    
+
 
 
 
