@@ -8,7 +8,8 @@ It includes full <span style="color:#32CD32;">data preprocessing</span>, <span s
   3. **CNN + LSTM**  
   4. **CNN + LSTM with Attention mechanism**  
 
-> **Note:** Only the **ViT + Transformer** model has been trained so far ,and still need more train. Training is computationally intensive and may take up to **3 days** on a high-end GPU.
+> **Note:** Only the **ViT + Transformer** model has been trained so far, and still need more train. Training is computationally intensive and may take up to **3 days** on a high-end GPU.
+
 
 
 
