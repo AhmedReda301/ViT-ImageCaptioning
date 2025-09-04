@@ -16,7 +16,7 @@ It includes full <span style="color:#32CD32;">data preprocessing</span>, <span s
 1. **Clone the repository:**
 ```bash
 git clone https://github.com/AhmedReda301/ViT-ImageCaptioning.git
-
+```
 
 
 
