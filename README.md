@@ -8,7 +8,17 @@ It includes full <span style="color:#32CD32;">data preprocessing</span>, <span s
   3. **CNN + LSTM**  
   4. **CNN + LSTM with Attention mechanism**  
 
-> **Note:** Currently, only the **ViT + Transformer** model has been trained. The other variants have not been trained yet. The ViT model is still undergoing training and requires more time to reach optimal accuracy. Note that training this model is computationally intensive and can take up to three days.
+> **Note:** Currently, only the **ViT + Transformer** model has been trained. The other variants have not been trained yet. The ViT model is still undergoing training and requires more time to reach optimal accuracy. Note that training this model is computationally intensive and can take long time.
+
+
+## <span style="color:#1E90FF;"> Usage</span>
+
+1. **Clone the repository:**
+```bash
+git clone https://github.com/AhmedReda301/ViT-ImageCaptioning.git
+
+
+
 
 
 
