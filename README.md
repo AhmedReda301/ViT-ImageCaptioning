@@ -14,9 +14,23 @@ It includes full <span style="color:#32CD32;">data preprocessing</span>, <span s
 ## <span style="color:#1E90FF;"> Usage</span>
 
 1. **Clone the repository:**
-```bash
-git clone https://github.com/AhmedReda301/ViT-ImageCaptioning.git
-```
+  ```bash
+  git clone https://github.com/AhmedReda301/ViT-ImageCaptioning.git
+  ```
+2. **Install the required dependencies:**
+  ```bash
+  pip install -r requirements.txt
+  ```
+  ```bash
+  python -q -m spacy download en_core_web_sm
+  ```
+3. **Download the model checkpoint (manual step):**
+4. **Run the main script:**
+  ```bash
+  python main.py
+  ```
+   
+
 
 
 
