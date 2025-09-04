@@ -35,7 +35,6 @@ It includes full <span style="color:#32CD32;">data preprocessing</span>, <span s
 
 ### <span style="color:#1E90FF;"> Sample Output:</span>
 ---
-[![Watch the video](assets/thumbnail.png)](https://drive.google.com/file/d/1IfAqQLWwW5FNG9pU5158EAWSE48Ox2hB/view?usp=sharing)
 
 ![Captioned Image](streamlit/imgs/img3.png)
 
@@ -132,6 +131,7 @@ total parametets:
 | ImgCap ViT + Transformer | 18     | 0.6858  |0.5282    | 0.2982 | 0.4979 | 0.5128  | 0.6596  |
 
 **Note:** The models are still undertrained. With further training and more epochs, the BLEU and CIDEr scores are expected to improve.
+
 
 
 
