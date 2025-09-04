@@ -61,6 +61,7 @@ This allows you to **test your pipeline** and verify that everything works corre
 ## <span style="color:#32CD32;"> Model Architecture:</span>
 
 The model used is **ImgCap (ViT + Transformer)** for image captioning. It consists of two main components: a **Vision Transformer (ViT) encoder** and a **Transformer-based decoder**.
+total parametets: 
 
 ---
 
@@ -120,10 +121,13 @@ The model used is **ImgCap (ViT + Transformer)** for image captioning. It consis
 
 
 
+## <span style="color:#1E90FF;"> Model Evaluation:</span>
 
+| Model                    | Epochs | BLEU-1  | BLEU-2   | BLEU-4 | METEOR | ROUGE-L | CIDEr   |
+|--------------------------|--------|---------|----------|--------|--------|---------|---------|
+| ImgCap ViT + Transformer | 18     | 0.6858  |0.5282    | 0.2982 | 0.4979 | 0.5128  | 0.6596  |
 
-
-
+**Note:** The models are still undertrained. With further training and more epochs, the BLEU and CIDEr scores are expected to improve.
 
 
 
