@@ -25,7 +25,7 @@ It includes full <span style="color:#32CD32;">data preprocessing</span>, <span s
   python -q -m spacy download en_core_web_sm
   ```
 3. **Download the model checkpoint (manual step):**  
-   - ImgCap (ViT + Transformer): [Download checkpoint](https://huggingface.co/your_model_link/resolve/main/vit_transformer.pth)
+   - ImgCap (ViT + Transformer): [Download checkpoint](https://www.kaggle.com/models/ahmedredaahmedali/vittransformer)
 
 4. **Run the main script:**
   ```bash
@@ -55,6 +55,7 @@ Run the following command to download the sample dataset **or** click [Download 
 ```bash
 kaggle datasets download -d ahmedredaahmedali/flickr30k-dataset-2-sample -p /path/to/data/Flickr30_sample
 ```
+
 
 
 
